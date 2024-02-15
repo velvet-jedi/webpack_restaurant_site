@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(./Monograf/Monograf\ Regular.ttf);
+}
+
+* {
+    font-family: 'MyFont';
+}
+
+img {
+    height: 300px;
+    width: 500px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px auto;
+    border: 1px solid black;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.next, .prev {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 40vw;
+}
