@@ -72,7 +72,7 @@ export default function initializePage() {
     }
 
     const goNext = () => {
-        counter = (counter + 1) % slides.length;
+        counter = (counter + 1) % slides.length; 
         slideImage();
     }
 
