@@ -1,8 +1,8 @@
 export default function initializePage() {
     const contentDiv = document.getElementById('content');
 
+
     const slides = [
-        
         {
             imgSrc: require('./images/hot_dog.png'),
             title: 'HOT DOG',
@@ -25,14 +25,6 @@ export default function initializePage() {
         },
     ]
 
-
-    const prevArrow = document.createElement('button');
-    prevArrow.classList.add('prev');
-    prevArrow.innerHTML = '&larr;';
-    prevArrow.onclick = function () {
-        changeSlide(-1);
-    };
-    contentDiv.appendChild(prevArrow);
 
 
     const slidesContainer = document.createElement('div');
@@ -58,34 +50,64 @@ export default function initializePage() {
 
         const bar = document.createElement('hr');
         textDiv.appendChild(title);
-        
+
         textDiv.appendChild(bar);
-        
+
         textDiv.appendChild(description);
 
         slideDiv.appendChild(image);
         slideDiv.appendChild(textDiv);
 
         slidesContainer.appendChild(slideDiv);
-        
+
     });
+
     contentDiv.appendChild(slidesContainer);
     slidesContainer.classList.add('slidesContainer');
 
-    
-    
+    const slideImage = () => {
+        slidEs.forEach((slide) => {
+            slide.style.transform = `translateX(-${counter * 100}%)`;
+        })
+    }
+
+    const goNext = () => {
+        counter = (counter + 1) % slides.length;
+        slideImage();
+    }
+
+    const goPrev = () => {
+        counter = (counter - 1 + slides.length) % slides.length;
+        slideImage();
+    }
+
     
 
-    const nextArrow = document.createElement('button');
-    nextArrow.classList.add('next');
-    nextArrow.innerHTML = '&rarr;';
-    nextArrow.onclick = function () {
-        changeSlide(1);
-    };
 
-    // Append navigation arrows to the content
-    
-    contentDiv.appendChild(nextArrow);
+    const prevBtn = document.createElement('button');
+    prevBtn.textContent = '<';
+    prevBtn.id = 'prev-btn';
+    prevBtn.onclick = goPrev;
+
+    slidesContainer.appendChild(prevBtn);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.textContent = '>';
+    nextBtn.id = 'next-btn';
+    nextBtn.onclick = goNext;
+
+    slidesContainer.appendChild(nextBtn);
+
+    console.log(slidesContainer);
+
+    const slidEs = document.querySelectorAll('.slide');
+    var counter = 0;
+    slidEs.forEach((slide, index) => {
+        slide.style.left = `${index * 100}%`;
+    })
+
 
     
+
+
 }
