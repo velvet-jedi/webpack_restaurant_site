@@ -15,6 +15,8 @@
 
 body {
     background-color: #232323;
+    overflow: hidden;
+    
 }
 
 .food-img {
@@ -31,13 +33,23 @@ h1 {
     margin-bottom: 0px;
 }
 
+nav > button{
+    cursor: pointer;
+    border: none;
+    font-size: 25px;   
+    font-weight: 900;
+}
+a{
+    text-decoration: none;
+    color: yellow;
+}
 hr {
     background: #DDA454;
     background: linear-gradient(135deg, #DDA454, #EA540F);
     height: 5px;
     border: none;
     margin-top: 10px;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 header {
@@ -46,7 +58,8 @@ header {
     align-items: center;
     margin: 0 125px auto;
     position: relative;
-    top: 30px;
+    top: 20px;
+    z-index: 1;
 }
 
 
@@ -69,6 +82,7 @@ header {
     align-items: center;
     gap: 51px;
     transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    animation: shrink 2s ease-in-out;
 }
 
 .text {
@@ -87,4 +101,71 @@ header {
 
 #next-btn {
     float: right;
+}
+
+img.top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+img.bottom-right {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+img.bottom-left{
+    bottom: 0;
+    position: absolute;
+}
+img.top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-80%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.material-symbols-outlined {
+    font-size: 40px;
+}
+h3{
+    font-size: 40px;
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(80%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes shrink {
+    20% {
+        transform: scale(1.1);
+    }
+
+    40% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+img.top-left, img.bottom-left {
+    animation: slideInFromLeft 2.3s ease-in-out;
+}
+
+img.top-right, img.bottom-right {
+    animation: slideInFromRight 2.3s ease-in-out;
 }

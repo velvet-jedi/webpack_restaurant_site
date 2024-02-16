@@ -98,7 +98,7 @@ export default function initializePage() {
 
     slidesContainer.appendChild(nextBtn);
 
-    console.log(slidesContainer);
+    // console.log(slidesContainer);
 
     const slidEs = document.querySelectorAll('.slide');
     var counter = 0;
