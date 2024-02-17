@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        pageLoad: './src/pageLoad.js'
+        pageLoad: './src/pageLoad.js',
+        about: './src/about.js',
+        contact: './src/contact.js' 
     },
     module: {
         rules: [
@@ -30,8 +32,22 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Order Food Quicker',
-            template: './src/index.html'
-        })
+            filename: 'index.html',
+            template: './src/index.html',
+            chunks: ['index'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About Us',
+            template: './src/about.html',
+            filename: 'about.html',
+            chunks: ['about'],
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Contact Us',
+            template: './src/contact.html',
+            filename: 'contact.html',
+            chunks: ['contact']
+        }),
     ]
         
 };

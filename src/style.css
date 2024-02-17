@@ -1,3 +1,7 @@
+/* :root{
+    --your-active-color: yellow;
+} */
+
 @font-face {
     font-family: 'MyFont';
     src: url(./Monograf/Monograf\ Regular.ttf);
@@ -38,11 +42,12 @@ nav > button{
     border: none;
     font-size: 25px;   
     font-weight: 900;
+    margin: 15px;
 }
 a{
     text-decoration: none;
-    color: yellow;
 }
+
 hr {
     background: #DDA454;
     background: linear-gradient(135deg, #DDA454, #EA540F);
@@ -169,3 +174,7 @@ img.top-left, img.bottom-left {
 img.top-right, img.bottom-right {
     animation: slideInFromRight 2.3s ease-in-out;
 }
+
+/* nav button.active {
+    color: var(--your-active-color);
+} */

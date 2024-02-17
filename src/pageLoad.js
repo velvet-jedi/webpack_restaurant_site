@@ -1,6 +1,14 @@
 export default function initializePage() {
     const contentDiv = document.getElementById('content');
 
+    const aboutContentDiv = document.getElementById('about-content');
+
+    const contactContentDiv = document.getElementById('contact-content');
+
+    if (contentDiv) {
+        
+    }
+
 
     const slides = [
         {
