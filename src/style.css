@@ -1,6 +1,3 @@
-/* :root{
-    --your-active-color: yellow;
-} */
 
 @font-face {
     font-family: 'MyFont';
@@ -175,6 +172,61 @@ img.top-right, img.bottom-right {
     animation: slideInFromRight 2.3s ease-in-out;
 }
 
-/* nav button.active {
-    color: var(--your-active-color);
-} */
+.contact-content{
+    height: 500px;
+    width: 800px;
+}
+h1 {
+    margin-bottom: 40px;
+}
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 130px auto;
+    width: auto;
+}
+
+#contact-content form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px ;
+    background-color: #2b2b2b;
+}
+
+input {
+    margin: 20px;
+    width: 400px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    font-size: 0.5rem;
+    background-color: #232323;
+}
+form button {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    background-color: #232323;
+}
+
+#row-btn {
+    display: flex;
+    flex: row;
+    margin: 20px auto;
+    border:none;
+}
+#description {
+    height: 125px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+    background-color: #232323;
+    font-size: 0.6rem;
+}
+#row1, #row2 {
+    border:none;
+}
