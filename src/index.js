@@ -40,27 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
     contentDiv.appendChild(bg);
 
 
-    // const currentPage = window.location.pathname;
-
-    // const setActiveLink = (linkId) => {
-    //     const links = document.querySelectorAll('nav button');
-    //     links.forEach((link) => {
-    //         link.classList.remove('active');
-    //     });
-
-    //     const activeLink = document.getElementById(linkId);
-    //     if(activeLink){
-    //         activeLink.classList.add('active');
-    //     }
-    // };
-
-    // if(currentPage.includes('index.html')){
-    //     setActiveLink('home-link');
-    // } else if (currentPage.includes('about.html')){
-    //     setActiveLink('about-link');
-    // } else if (currentPage.includes('contact.html')){
-    //     setActiveLink('contact-link');
-    // }
-
-
 });
