@@ -190,7 +190,7 @@ h1 {
 #contact-content form {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 12px;
     border-radius: 20px ;
     background-color: #2b2b2b;
 }
@@ -198,15 +198,15 @@ h1 {
 input {
     margin: 20px;
     width: 400px;
-    padding: 10px;
+    padding: 20px;
     border:none;
     border-radius: 10px;
     font-size: 0.5rem;
     background-color: #232323;
 }
 form button {
-    margin: 15px;
-    padding: 15px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 10px;
     border:none;
     background-color: #232323;
@@ -226,6 +226,7 @@ form button {
     border:none;
     background-color: #232323;
     font-size: 0.6rem;
+    resize: none;
 }
 #row1, #row2 {
     border:none;
