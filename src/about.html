@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Add your critical styles here */
+        body {
+            background-color: #232323;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: 'MyFont';
+            color: aliceblue;
+            background-color: transparent;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #232323;
+            overflow: hidden;
+
+        }
+
+        nav>button {
+            cursor: pointer;
+            border: none;
+            font-size: 25px;
+            font-weight: 900;
+            margin: 15px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 125px auto;
+            position: relative;
+            top: 20px;
+            z-index: 1;
+        }
+
+        @font-face {
+            font-family: 'MyFont';
+            src: url(./Monograf/Monograf\ Regular.ttf);
+        }
+
+
+        /* ... other critical styles ... */
+    </style>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
+
 <body>
 
     <header>
-        
+
         <h3 id="name"><span style='margin-right: 20px;' class="material-symbols-outlined">
-            lunch_dining
-        </span> TOP Restaurant</h3>
+                lunch_dining
+            </span> TOP Restaurant</h3>
 
         <nav>
             <button id="home-link">
@@ -32,7 +94,8 @@
     </header>
 
     <div class="about-content" id="about-content"></div>
-    
+
 
 </body>
+
 </html>

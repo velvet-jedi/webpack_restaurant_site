@@ -35,18 +35,21 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             chunks: ['index'],
+            
         }),
         new HtmlWebpackPlugin({
             title: 'About Us',
             template: './src/about.html',
             filename: 'about.html',
             chunks: ['about'],
+           
         }),
         new HtmlWebpackPlugin({
             title: 'Contact Us',
             template: './src/contact.html',
             filename: 'contact.html',
-            chunks: ['contact']
+            chunks: ['contact'],
+           
         }),
     ]
         
